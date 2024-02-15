@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av Kinobilleter</title>
+</head>
+<body>
+<h1>Bestilling av kinobilleter</h1>
+
+<label for="film">Velg film:</label>
+<select id="film" required>
+    <option value="">Velg en film</option>
+    <option value="Krim">Krim</option>
+    <option value="Komedie">Komedie</option>
+    <option value="Drama">Drama</option>
+</select>
+<span id="film-feilmelding" class="feilmelding"></span><br><br>
+
+<label for="antall">Antall Billetter:</label>
+<input type="number" id="antall" min="1" required>
+<span id="antall-feilmelding" class="feilmelding"></span><br><br>
+
+<label for="fornavn">Fornavn:</label>
+<input type="text" id="fornavn" required>
+<span id="fornavn-feilmelding" class="feilmelding"></span><br><br>
+
+<label for="etternavn">Etternavn:</label>
+<input type="text" id="etternavn" required>
+<span id="etternavn-feilmelding" class="feilmelding"></span><br><br>
+
+<label for="tlf">Telefonnr:</label>
+<input type="tel" id="tlf" pattern="[0-9]{8}" required>
+<span id="tlf-feilmelding" class="feilmelding"></span><br><br>
+
+<label for="epost">E-post:</label>
+<input type="email" id="epost" required>
+<span id="epost-feilmelding" class="feilmelding"></span><br><br>
+
+<button onclick="kjop_Billet()">Kjøp Billett</button>
+
+<h2>Alle Billetter</h2>
+<ul id="billettliste"></ul>
+<ul id="tekstListe"></ul>
+
+<button onclick="slettBilleter()">Slett alle billetter</button>
+
+<script src="script.js"></script>
+</body>
+</html>
